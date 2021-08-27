@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlantListFamily">
+
+    <SearchView
+        android:id="@+id/searchview_family_list"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layoutDirection="rtl"
+        android:queryHint="Tìm kiếm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </SearchView>
+
+    <TextView
+        android:id="@+id/txt_family_list_family_tab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="HỌ"
+        android:textColor="#8BC34A"
+        app:layout_constraintWidth_percent=".33"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchview_family_list" />
+
+    <TextView
+        android:id="@+id/txt_family_list_genus_tab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="CHI"
+        app:layout_constraintWidth_percent=".33"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_family_list_family_tab"
+        app:layout_constraintTop_toBottomOf="@+id/searchview_family_list" />
+
+    <TextView
+        android:id="@+id/txt_family_list_species_tab"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="LOÀI"
+        app:layout_constraintWidth_percent=".33"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_family_list_genus_tab"
+        app:layout_constraintTop_toBottomOf="@+id/searchview_family_list" />
+
+    <ListView
+        android:id="@+id/custom_listview_plant_family"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_family_list_family_tab"></ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
